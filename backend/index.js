@@ -7,6 +7,10 @@ const PORT = 5000;
 
 app.use(cors());
 
+app.get("/", (req, res) => {
+  res.send("Hello world!");
+});
+
 app.get("/weather/:city", async (req, res) => {
   const city = req.params.city;
   try {

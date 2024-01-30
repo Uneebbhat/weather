@@ -6,7 +6,10 @@ const app = express();
 const PORT = 5000;
 
 app.use(
-  cors({ origin: ["https://weather-client-six.vercel.app/"], credentials: tru })
+  cors({
+    origin: ["https://weather-client-o7lgeic9w-uneebbhat.vercel.app/"],
+    credentials: tru,
+  })
 );
 
 app.get("/", (req, res) => {

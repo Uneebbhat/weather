@@ -7,7 +7,7 @@ const PORT = 5000;
 
 app.use(
   cors({
-    origin: ["https://weather-client-o7lgeic9w-uneebbhat.vercel.app/"],
+    origin: ["https://weather-client-six.vercel.app/"],
     credentials: tru,
   })
 );

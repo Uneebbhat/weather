@@ -8,7 +8,9 @@ const useWeather = () => {
 
   const getWeather = async (city) => {
     try {
-      const response = await axios.get(`http://localhost:5000/weather/${city}`);
+      const response = await axios.get(
+        `https://weather-backend-inky.vercel.app/${city}`
+      );
       setWeather(response.data);
       console.log(response.data);
       setError(null);

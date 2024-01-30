@@ -6,6 +6,8 @@ const useWeather = () => {
   const [weather, setWeather] = useState(null);
   const [error, setError] = useState(null);
 
+  axios.defaults.withCredentials = true;
+
   const getWeather = async (city) => {
     try {
       const response = await axios.get(

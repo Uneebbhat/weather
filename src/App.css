@@ -30,6 +30,7 @@ img {
 
 .search-wrapper .search-input {
   max-width: 100%;
+  width: 100%;
 }
 
 .search-wrapper input {
@@ -48,6 +49,7 @@ img {
   background-color: #748cf1;
   padding: 8px 16px;
   color: white;
+  cursor: pointer;
 }
 
 .search-wrapper .weather-data h2 {
@@ -60,11 +62,41 @@ img {
   /* height: auto; */
 }
 
+.card {
+  background-color: #748cf1;
+  display: inline-block;
+  padding: 16px;
+  max-width: 100%;
+  width: calc(33.33% - 10px);
+  margin-bottom: 10px;
+  height: 150px;
+  border-radius: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.card h3 {
+  font-weight: 400;
+  font-size: 2rem;
+}
+
 .other-data-wrapper {
   background-color: #efefef;
   height: 100vh;
   max-width: 100%;
   width: 70%;
+  padding: 20px;
+}
+
+.other-data-wrapper .card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
 }
 
 @media screen and (max-width: 1050px) {
@@ -86,6 +118,11 @@ img {
   }
 
   .search-wrapper {
+    width: 100%;
+  }
+
+  .search-wrapper input,
+  .search-wrapper button {
     width: 100%;
   }
 

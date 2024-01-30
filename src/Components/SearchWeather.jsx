@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import useWeather from "../hooks/useWeather";
+import OtherWeatherData from "./OtherWeatherData";
 
 const SearchWeather = ({ updateWeatherData }) => {
   const [city, setCity] = useState("");
@@ -55,6 +56,7 @@ const SearchWeather = ({ updateWeatherData }) => {
           <h3>{city}</h3>
         </div> */}
       </div>
+      <OtherWeatherData weather={weather} />
     </>
   );
 };

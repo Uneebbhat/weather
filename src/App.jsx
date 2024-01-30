@@ -1,7 +1,6 @@
 // App.jsx
 import React, { useState } from "react";
 import SearchWeather from "./Components/SearchWeather";
-import OtherWeatherData from "./Components/OtherWeatherData";
 import "./App.css";
 
 function App() {
@@ -17,10 +16,6 @@ function App() {
   return (
     <div className="main-wrapper">
       <SearchWeather updateWeatherData={updateWeatherData} />
-      <OtherWeatherData
-        weather={weatherData.weather}
-        error={weatherData.error}
-      />
     </div>
   );
 }

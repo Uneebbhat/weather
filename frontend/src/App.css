@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: inter, poppins, sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+.main-wrapper {
+  display: flex;
+}
+
+.search-wrapper {
+  padding: 20px;
+  background-color: #ffff;
+  height: 100vh;
+  max-width: 100%;
+  width: 30%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-wrapper .search-input {
+  max-width: 100%;
+  width: 100%;
+}
+
+.search-wrapper input {
+  max-width: 100%;
+  border: 0;
+  outline: 0;
+  background-color: #efefef;
+  padding: 8px 16px;
+  border-radius: 50px 0 0 50px;
+}
+
+.search-wrapper button {
+  border: 0;
+  outline: 0;
+  border-radius: 0 50px 50px 0;
+  background-color: #748cf1;
+  padding: 8px 16px;
+  color: white;
+  cursor: pointer;
+}
+
+.search-wrapper .weather-data h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.search-wrapper .weather-data img {
+  width: 250px;
+  /* height: auto; */
+}
+
+.card {
+  background-color: #748cf1;
+  display: inline-block;
+  padding: 16px;
+  max-width: 100%;
+  width: calc(33.33% - 10px);
+  margin-bottom: 10px;
+  height: 150px;
+  border-radius: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.card h3 {
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.other-data-wrapper {
+  background-color: #efefef;
+  height: 100vh;
+  max-width: 100%;
+  width: 70%;
+  padding: 20px;
+}
+
+.other-data-wrapper .card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+@media screen and (max-width: 1050px) {
+  .search-wrapper input {
+    border-radius: 50px;
+    width: 100%;
+  }
+
+  .search-wrapper button {
+    border-radius: 50px;
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-wrapper {
+    flex-direction: column;
+  }
+
+  .search-wrapper {
+    width: 100%;
+  }
+
+  .search-wrapper input,
+  .search-wrapper button {
+    width: 100%;
+  }
+
+  .other-data-wrapper {
+    width: 100%;
+  }
+}

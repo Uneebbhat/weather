@@ -1,6 +1,6 @@
 // OtherWeatherData.jsx
 import React from "react";
-import Card from "./Card";
+// import Card from "./Card";
 
 const OtherWeatherData = ({ weather }) => {
   // console.log(`This is weather data: ${JSON.stringify(weather)}`);
@@ -11,12 +11,6 @@ const OtherWeatherData = ({ weather }) => {
   const formatTime = (timestamp) => {
     const date = new Date(timestamp * 1000); // Convert to milliseconds
     return date.toLocaleTimeString();
-  };
-
-  const formatTimeZone = (timestamp, timeZone) => {
-    const date = new Date(timestamp * 1000); // Convert to milliseconds
-    const options = { timeZone, hour12: false };
-    return date.toLocaleTimeString("en-US", options);
   };
 
   return (

@@ -2,22 +2,13 @@ import React, { useState } from "react";
 import useWeather from "../hooks/useWeather";
 import OtherWeatherData from "./OtherWeatherData";
 
-const SearchWeather = ({ updateWeatherData }) => {
+const SearchWeather = () => {
   const [city, setCity] = useState("");
   const { weather, error, getWeather } = useWeather();
 
   const handleGetWeather = () => {
     if (city.trim() !== "") {
-      getWeather(city)
-        .then((response) => {
-          updateWeatherData({ weather: response.data, error: null });
-        })
-        .catch((error) => {
-          updateWeatherData({
-            weather: null,
-            error: "Error fetching weather data",
-          });
-        });
+      getWeather(city);
       setCity("");
     }
   };
@@ -52,9 +43,6 @@ const SearchWeather = ({ updateWeatherData }) => {
             </h2>
           </div>
         ) : null}
-        {/* <div className="city-name">
-          <h3>{city}</h3>
-        </div> */}
       </div>
       <OtherWeatherData weather={weather} />
     </>

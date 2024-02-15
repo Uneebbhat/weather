@@ -7,8 +7,15 @@ const PORT = 5000;
 
 app.use(
   cors({
-    origin: ["https://weather-client-six.vercel.app/"],
-    credentials: tru,
+    origin: function (origin, callback) {
+      // Allow requests from the specified origin
+      if (!origin || origin === "http://localhost:3000") {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
   })
 );
 

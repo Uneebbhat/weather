@@ -9,6 +9,8 @@ function App() {
     error: null,
   });
 
+  console.log(weatherData);
+
   const updateWeatherData = (data) => {
     setWeatherData(data);
   };
